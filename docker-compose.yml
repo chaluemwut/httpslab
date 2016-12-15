@@ -35,6 +35,6 @@ simplesite:
   volumes:
     - "./nginx/conf.d/:/etc/nginx/conf.d"
   environment:
-    - VIRTUAL_HOST=soeleh.com, www.soeleh.com
-    - LETSENCRYPT_HOST=soeleh.com, www.soeleh.com
+    - VIRTUAL_HOST=soeleh.com
+    - LETSENCRYPT_HOST=soeleh.com
     - LETSENCRYPT_EMAIL=chaluemwut@hotmail.com      
