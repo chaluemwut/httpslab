@@ -13,7 +13,7 @@ nginxgen:
   image: jwilder/docker-gen
   volumes:
     - "/var/run/docker.sock:/tmp/docker.sock:ro"
-    - "/tmp/templates:/etc/docker-gen/templates"
+    - "./dockergen/templates:/etc/docker-gen/templates"
   volumes_from:
     - nginx
   links:
