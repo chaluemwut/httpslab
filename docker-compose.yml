@@ -7,7 +7,7 @@ nginx:
     - "/etc/nginx/vhost.d"    
     - "/etc/nginx/conf.d"
     - "./nginx/html:/usr/share/nginx/html"
-    - "./proxy/certs:/etc/nginx/certs:ro"
+    - "./proxy/certs:/etc/nginx/certs:rw"
 
 nginxgen:
   image: jwilder/docker-gen
@@ -35,6 +35,6 @@ simplesite:
   volumes:
     - "./nginx/conf.d/:/etc/nginx/conf.d"
   environment:
-    - VIRTUAL_HOST=soeleh.com
-    - LETSENCRYPT_HOST=soeleh.com
+    - VIRTUAL_HOST=soeleh.com,www.soeleh.com
+    - LETSENCRYPT_HOST=soeleh.com,www.soeleh.com
     - LETSENCRYPT_EMAIL=chaluemwut@hotmail.com      
